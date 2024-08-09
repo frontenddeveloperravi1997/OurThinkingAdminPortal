@@ -102,7 +102,7 @@ const DataList = ({ fetchData, pageNumber, setTotalPages, pageType,itemsDisplaye
         setLoading(true)
         try {
             const responseData = await fetchData(pageNumber);
-            if(responseData?.statusCode ===200){
+          if (responseData?.statusCode === 200) {
                 setTotalPages(responseData?.data?.totalPages);
                 setData(responseData?.data?.data);
                 setLoading(false)
